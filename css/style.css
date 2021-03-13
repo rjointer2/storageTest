@@ -1,0 +1,34 @@
+:root {
+
+    /* MARGINS */
+
+    --m1: 1.5em; 
+    --m2: 3em;
+    --m3: 6em; 
+    --m4: 12em;
+    
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+.wrapper {
+    margin-top: var(--m4);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont_a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item{
+    margin: var(--m1);
+}
