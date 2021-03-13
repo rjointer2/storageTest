@@ -27,8 +27,25 @@
 .cont_a {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "a a"
+        "b c"
+    ;
 }
 
-.item{
+.cont_b {
+    border: 1px solid black;
+    padding: var(--m1)
+}
+
+.a {
+    grid-area: a
+}
+
+.item {
     margin: var(--m1);
+}
+
+input {
+    padding: var(--m1);
 }
