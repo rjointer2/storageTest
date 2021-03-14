@@ -10,9 +10,9 @@ let mem = [];
 
 window.onload = () => {
     if(localStorage.getItem('projectData') != null) {
-        let dataJSON = JSON.parse(localStorage.getItem('Data'));
+        let dataJSON = JSON.parse(localStorage.getItem('projectData'));
         mem = dataJSON;
-        console.log(dataJSON)
+        history(mem)
     } else {
         mem = [];
         pastInputs.innerHTML = 'No Previous translations Made'
@@ -33,8 +33,16 @@ let save = (...args) => {
         "transition" : args[2]
     }
     mem.push(obj);
-    let dataJSON = JSON.stringify(obj)
+    let dataJSON = JSON.stringify(mem)
     localStorage.setItem('projectData', dataJSON);
 
+}
+
+let history = () => {
+    console.log(mem);
+    for(let i in mem) {
+       let info = document.createTextNode(mem[i].language)
+       pastInputs.appendChild(info)
+    }
 }
  
